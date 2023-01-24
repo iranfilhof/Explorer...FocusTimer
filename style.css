@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+
+  --bg-body: #FFFFFF;
+  --bg-cards: #E1E1E6;
+  --bg-cards-hover: #9e9ea1;
+  --bg-cards-selected: #ebb504;
+}
+
+body {
+  background: var(--bg-body);
+
+  font-family: 'Roboto', sans-serif;
+
+  min-height: 100vh;
+
+  display: grid;
+}
+
+main {
+  width: 82.1rem;
+
+  margin: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  justify-self: center;
+  align-self: center;
+}
+
+button {
+  border-style: none;
+  border: none;
+  cursor: pointer;
+
+  background: transparent;
+}
+
+.stopwatch {
+  display: grid;
+  align-content: center;
+}
+
+.timer {
+  font-size: 12.6rem;
+  line-height: 13rem;
+
+  margin-bottom: 2.7rem;
+
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+
+}
+
+.hide {
+  display: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "A B"
+  "C D";
+  gap: 3.2rem;
+
+}
+
+button .tree {
+  grid-area: A;
+}
+
+button .rain {
+  grid-area: B;
+}
+
+button .shop {
+  grid-area: C;
+}
+
+button .fire {
+  grid-area: D;
+}
+
+.cards button {
+  padding: 4.6rem;
+
+  border-radius: 2.4rem;
+  box-shadow: 5px 5px 10px;
+
+  background: var(--bg-cards);
+
+  transition: background 300ms;
+}
+
+.cards button:hover {
+  background: var(--bg-cards-hover);
+
+  transition: background 300ms;
+}
+
+.cards .selected, .cards .selected svg path {
+  background: var(--bg-cards-selected);
+
+  fill: white;
+
+  transition: background 300ms;
+}
